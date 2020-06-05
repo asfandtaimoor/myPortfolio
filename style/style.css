@@ -85,6 +85,70 @@ body .projects .block .block__elem img {
   width: 100%;
 }
 
+body .contact h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+body .contact .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .contact .block .elem_1 {
+  font-size: 32px;
+}
+
+body .contact .block .elem_1 a {
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: none;
+  color: #38383a;
+}
+
+body .contact .block .elem_1 a i {
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  border-radius: 50%;
+}
+
+body .contact .block .elem_1 a .fa-facebook {
+  background-color: #4267b2;
+  padding: 20px 27px;
+}
+
+body .contact .block .elem_1 a .fa-github {
+  background-color: #252525;
+  padding: 20px 22px;
+}
+
+body .contact .block .elem_1 a .fa-envelope {
+  background-color: #e93b3b;
+}
+
+body .contact .block .elem_2 form {
+  margin: 50px 0;
+}
+
+body .contact .block .elem_2 form input {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+body .contact .block .elem_2 form input:last-child {
+  width: 94.5%;
+}
+
 @media screen and (max-width: 768px) {
   body header ul {
     display: none;
