@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'Tenali Ramakrishna', sans-serif;
     header {
         padding: 0;
         display: flex;
@@ -25,6 +26,59 @@ body {
                     text-decoration: none;
                     color: white;
                 }
+            }
+        }
+    }
+    // Home
+    .home {
+        height: 95vh;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            filter: brightness(25%);
+        }
+        .text {
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            color: white;
+            h1 {
+                color: white;
+            }
+        }
+    }
+    // Projects
+    .projects {
+        h1 {
+            text-align: center;
+        }
+        .block {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            .block__elem {
+                margin: 10px;
+                background-color: red;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        // Header
+        header {
+            ul {
+                display: none;
+            }
+        }
+        // Projects
+        .projects {
+            .block {
+                grid-template-columns: auto auto;
             }
         }
     }

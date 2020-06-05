@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: 'Tenali Ramakrishna', sans-serif;
 }
 
 body header {
@@ -39,5 +40,58 @@ body header ul li:hover {
 body header ul li a {
   text-decoration: none;
   color: white;
+}
+
+body .home {
+  height: 95vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body .home img {
+  width: 100%;
+  -webkit-filter: brightness(25%);
+          filter: brightness(25%);
+}
+
+body .home .text {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  color: white;
+}
+
+body .home .text h1 {
+  color: white;
+}
+
+body .projects h1 {
+  text-align: center;
+}
+
+body .projects .block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+body .projects .block .block__elem {
+  margin: 10px;
+  background-color: red;
+}
+
+body .projects .block .block__elem img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  body header ul {
+    display: none;
+  }
+  body .projects .block {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
