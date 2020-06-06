@@ -1,4 +1,4 @@
-$headingSize:32px;
+$headingSize:52px;
 body {
     margin: 0;
     font-family: 'Tenali Ramakrishna', sans-serif;
@@ -10,7 +10,7 @@ body {
         h1 {
             margin: 0;
             padding: 10px;
-            font-size: $headingSize;
+            font-size: 32px;
             color: white;
         }
         ul {
@@ -53,6 +53,7 @@ body {
     .projects {
         h1 {
             text-align: center;
+            font-size: $headingSize;
         }
         .block {
             display: grid;
