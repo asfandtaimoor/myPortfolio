@@ -170,7 +170,7 @@ body .contact .block .elem_2 form input:last-child {
   body header ul {
     display: none;
     position: fixed;
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.9);
     left: 0;
     top: 0;
     width: 100%;
