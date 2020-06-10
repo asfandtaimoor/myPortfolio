@@ -10,7 +10,10 @@ body header {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: #00a2ff;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 body header h1 {
@@ -60,7 +63,7 @@ body header .hamburger .fa-bars {
 }
 
 body .home {
-  max-height: 95vh;
+  max-height: 200vh;
   overflow: hidden;
   position: relative;
 }

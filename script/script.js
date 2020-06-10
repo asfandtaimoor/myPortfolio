@@ -1,6 +1,19 @@
+let headNavigation = document.getElementById("headNavigation");
 let menu = document.getElementById("menu");
 let closeMenu = document.getElementById("close-menu");
 let menuPanel = document.getElementById("menu-panel");
+
+//  Change background of header  when user Scroll
+
+window.onscroll = function() { myFunction() };
+
+function myFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        headNavigation.style.backgroundColor = "black";
+    } else {
+        headNavigation.style.backgroundColor = "transparent";
+    }
+}
 
 
 // Show the menu panel and close icon
