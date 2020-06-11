@@ -51,7 +51,7 @@ body {
                 color: white;
                 right: 3%;
                 position: absolute;
-                font-size: 72px;
+                font-size: 50px;
                 display: none;
                 top: 0;
             }
@@ -68,9 +68,8 @@ body {
         max-height: 200vh;
         overflow: hidden;
         position: relative;
-        img {
-            width: 100%;
-            filter: brightness(25%);
+        #particles-js {
+            height: 100vh;
         }
         .text {
             color: white;
@@ -178,6 +177,9 @@ body {
                 li {
                     cursor: pointer;
                     text-align: center;
+                    &:nth-child(1) {
+                        margin-top: 60px;
+                    }
                 }
             }
             .hamburger {
@@ -185,7 +187,7 @@ body {
                 position: absolute;
                 right: 3%;
                 .fa-bars {
-                    font-size: 60px;
+                    font-size: 47px;
                 }
             }
         }
@@ -225,14 +227,6 @@ body {
 
 @media screen and (max-width:425px) {
     body {
-        //header
-        header {
-            .hamburger {
-                .fa-bars {
-                    font-size: 60px;
-                }
-            }
-        }
         // Home
         .home {
             .text {

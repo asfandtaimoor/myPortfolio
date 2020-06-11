@@ -64,7 +64,7 @@ body header ul .fa-times {
   color: white;
   right: 3%;
   position: absolute;
-  font-size: 72px;
+  font-size: 50px;
   display: none;
   top: 0;
 }
@@ -83,10 +83,8 @@ body .home {
   position: relative;
 }
 
-body .home img {
-  width: 100%;
-  -webkit-filter: brightness(25%);
-          filter: brightness(25%);
+body .home #particles-js {
+  height: 100vh;
 }
 
 body .home .text {
@@ -213,13 +211,16 @@ body .contact .block .elem_2 form input:last-child {
     cursor: pointer;
     text-align: center;
   }
+  body header ul li:nth-child(1) {
+    margin-top: 60px;
+  }
   body header .hamburger {
     display: block;
     position: absolute;
     right: 3%;
   }
   body header .hamburger .fa-bars {
-    font-size: 60px;
+    font-size: 47px;
   }
   body .home .text h1 {
     font-size: 60px;
@@ -248,9 +249,6 @@ body .contact .block .elem_2 form input:last-child {
 }
 
 @media screen and (max-width: 425px) {
-  body header .hamburger .fa-bars {
-    font-size: 60px;
-  }
   body .home .text h1 {
     font-size: 40px;
     margin: 10px;
