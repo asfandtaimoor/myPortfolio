@@ -1,6 +1,21 @@
 body {
   margin: 0;
-  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #807f7f;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  outline: 1px solid #2a2a2a;
 }
 
 body header {
@@ -75,14 +90,23 @@ body .home img {
 }
 
 body .home .text {
-  position: absolute;
-  top: 30%;
-  left: 20%;
   color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 60px;
 }
 
 body .home .text h1 {
-  color: white;
+  margin: 20px;
+}
+
+body .home .text h2 {
+  font-size: 30px;
+  margin: 10px;
+  text-align: right;
 }
 
 body .projects h1 {
@@ -197,6 +221,14 @@ body .contact .block .elem_2 form input:last-child {
   body header .hamburger .fa-bars {
     font-size: 60px;
   }
+  body .home .text h1 {
+    font-size: 60px;
+    margin: 10px;
+  }
+  body .home .text h2 {
+    font-size: 20px;
+    margin: 5px;
+  }
   body .projects h1 {
     font-size: 40px;
   }
@@ -218,6 +250,14 @@ body .contact .block .elem_2 form input:last-child {
 @media screen and (max-width: 425px) {
   body header .hamburger .fa-bars {
     font-size: 60px;
+  }
+  body .home .text h1 {
+    font-size: 40px;
+    margin: 10px;
+  }
+  body .home .text h2 {
+    font-size: 20px;
+    margin: 5px;
   }
   body .projects h1 {
     font-size: 30px;

@@ -8,7 +8,7 @@ let menuPanel = document.getElementById("menu-panel");
 window.onscroll = function() { myFunction() };
 
 function myFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         headNavigation.style.backgroundColor = "black";
     } else {
         headNavigation.style.backgroundColor = "transparent";

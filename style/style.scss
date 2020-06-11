@@ -2,8 +2,21 @@ $headingSize:52px;
 $headingSizeTab: 40px;
 $headingSizeMobile: 30px;
 body {
+    // Custom Scroll bar
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: rgb(128, 127, 127);
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(42, 42, 42);
+        outline: 1px solid rgb(42, 42, 42);
+    }
     margin: 0;
-    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-family: 'Tenali Ramakrishna',
+    sans-serif;
     header {
         padding: 0;
         display: flex;
@@ -60,12 +73,19 @@ body {
             filter: brightness(25%);
         }
         .text {
-            position: absolute;
-            top: 30%;
-            left: 20%;
             color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
             h1 {
-                color: white;
+                margin: 20px;
+            }
+            h2 {
+                font-size: 30px;
+                margin: 10px;
+                text-align: right;
             }
         }
     }
@@ -169,6 +189,19 @@ body {
                 }
             }
         }
+        // Home
+        .home {
+            .text {
+                h1 {
+                    font-size: 60px;
+                    margin: 10px;
+                }
+                h2 {
+                    font-size: 20px;
+                    margin: 5px;
+                }
+            }
+        }
         // Projects
         .projects {
             h1 {
@@ -197,6 +230,19 @@ body {
             .hamburger {
                 .fa-bars {
                     font-size: 60px;
+                }
+            }
+        }
+        // Home
+        .home {
+            .text {
+                h1 {
+                    font-size: 40px;
+                    margin: 10px;
+                }
+                h2 {
+                    font-size: 20px;
+                    margin: 5px;
                 }
             }
         }
