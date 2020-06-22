@@ -5,15 +5,19 @@ let menuPanel = document.getElementById("menu-panel");
 
 //  Change background of header  when user Scroll
 
-window.onscroll = function() { myFunction() };
 
-function myFunction() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        headNavigation.style.backgroundColor = "black";
-    } else {
-        headNavigation.style.backgroundColor = "transparent";
-    }
-}
+// Project list
+
+
+// window.onscroll = function() { myFunction() };
+
+// function myFunction() {
+//     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+//         headNavigation.style.backgroundColor = "black";
+//     } else {
+//         headNavigation.style.backgroundColor = "transparent";
+//     }
+// }
 
 
 // Show the menu panel and close icon
@@ -30,10 +34,36 @@ closeMenu.addEventListener('click', () => {
 });
 
 function jumpBlock() {
-    menuPanel.style.display = 'none';
+    if (screen.width <= 768) {
+        menuPanel.style.display = 'none';
+    }
 }
 
 
-menuPanel.querySelectorAll("li").addEventListener('click', () => {
-    console.log("Hello wold");
-})
+// Filter Project 
+
+// select all Project
+let hideBlock = document.querySelectorAll('.pl-elem');
+
+function filter(activeClass) {
+
+    // Hide all project
+
+    for (let i = 0; i < hideBlock.length; i++) {
+        let hideCurrentBlock = hideBlock[i];
+
+        hideCurrentBlock.style.display = "none";
+    };
+
+
+    // select the project to show
+    let projectBlock = document.querySelectorAll(`.${activeClass}`);
+
+    // filter the project to show
+    for (let j = 0; j < projectBlock.length; j++) {
+        let currentBlock = projectBlock[j];
+
+        currentBlock.style.display = "block";
+    }
+
+}

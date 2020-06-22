@@ -1,11 +1,12 @@
 body {
   margin: 0;
   font-family: 'Tenali Ramakrishna', sans-serif;
+  background-color: rgba(0, 0, 0, 0.068);
 }
 
 body::-webkit-scrollbar {
   width: 10px;
-  background-color: #807f7f;
+  background-color: #2a2a2a;
 }
 
 body::-webkit-scrollbar-track {
@@ -14,8 +15,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #2a2a2a;
-  outline: 1px solid #2a2a2a;
+  background-color: #807f7f;
+  outline: 1px solid #807f7f;
 }
 
 body header {
@@ -29,6 +30,8 @@ body header {
   top: 0;
   z-index: 1;
   width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#406dc8), to(#56acbb));
+  background-image: linear-gradient(to right, #406dc8, #56acbb);
 }
 
 body header h1 {
@@ -49,14 +52,19 @@ body header ul {
 body header ul li {
   padding: 10px 20px;
   font-size: 32px;
+  cursor: pointer;
 }
 
 body header ul li:hover {
-  background-color: rgba(0, 0, 0, 0.637);
+  background-color: rgba(255, 255, 255, 0.514);
+}
+
+body header ul li:hover a {
+  color: #56acbb;
+  text-decoration: none;
 }
 
 body header ul li a {
-  text-decoration: none;
   color: white;
 }
 
@@ -107,25 +115,84 @@ body .home .text h2 {
   text-align: right;
 }
 
+body .projects {
+  margin-top: 5em;
+}
+
 body .projects h1 {
   text-align: center;
   font-size: 52px;
 }
 
-body .projects .block {
+body .projects .btn-list {
+  margin-top: 3em;
+  z-index: 2;
+}
+
+body .projects .btn-list .elem .btn {
+  margin-top: 10px;
+  background-color: #406dc8;
+  border-color: #406dc8;
+}
+
+body .projects .btn-list .elem .btn:hover {
+  background-color: #56acbb;
+  border-color: #56acbb;
+}
+
+body .projects .project-list {
+  margin-top: 2em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
       grid-template-columns: auto auto auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-body .projects .block .block__elem {
+body .projects .project-list .pl-elem {
+  position: relative;
   margin: 10px;
-  background-color: red;
+  overflow: hidden;
+  max-width: 800px;
 }
 
-body .projects .block .block__elem img {
+body .projects .project-list .pl-elem img {
   width: 100%;
+}
+
+body .projects .project-list .pl-elem .detail {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+}
+
+body .projects .project-list .pl-elem .detail .detail-elem {
+  color: white;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+body .projects .project-list .pl-elem .detail .detail-elem h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+body .projects .project-list .pl-elem:hover .detail {
+  display: inline;
+  top: 0;
+}
+
+body .contact {
+  margin-top: 5em;
 }
 
 body .contact h1 {
@@ -133,6 +200,7 @@ body .contact h1 {
 }
 
 body .contact .block {
+  margin-top: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

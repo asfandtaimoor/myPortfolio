@@ -1,22 +1,35 @@
+// colors
+$primarColor:#406dc8;
+$secondaryColor:#56acbb;
+// Measurements
 $headingSize:52px;
 $headingSizeTab: 40px;
 $headingSizeMobile: 30px;
+// All center
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 body {
     // Custom Scroll bar
     &::-webkit-scrollbar {
         width: 10px;
-        background-color: rgb(128, 127, 127);
+        background-color: rgb(42, 42, 42);
     }
     &::-webkit-scrollbar-track {
         box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
     }
     &::-webkit-scrollbar-thumb {
-        background-color: rgb(42, 42, 42);
-        outline: 1px solid rgb(42, 42, 42);
+        background-color: rgb(128, 127, 127);
+        outline: 1px solid rgb(128, 127, 127);
     }
     margin: 0;
     font-family: 'Tenali Ramakrishna',
     sans-serif;
+    background-color: rgba(0, 0, 0, 0.068);
     header {
         padding: 0;
         display: flex;
@@ -25,6 +38,7 @@ body {
         top: 0;
         z-index: 1;
         width: 100%;
+        background-image: linear-gradient(to right, $primarColor, $secondaryColor);
         h1 {
             margin: 0;
             padding: 10px;
@@ -38,11 +52,15 @@ body {
             li {
                 padding: 10px 20px;
                 font-size: 32px;
+                cursor: pointer;
                 &:hover {
-                    background-color: rgba(0, 0, 0, 0.637);
+                    background-color: rgba(255, 255, 255, 0.514);
+                    a {
+                        color: $secondaryColor;
+                        text-decoration: none;
+                    }
                 }
                 a {
-                    text-decoration: none;
                     color: white;
                 }
             }
@@ -90,28 +108,76 @@ body {
     }
     // Projects
     .projects {
+        margin-top: 5em;
         h1 {
             text-align: center;
             font-size: $headingSize;
         }
-        .block {
+        // btn-list
+        .btn-list {
+            margin-top: 3em;
+            z-index: 2;
+            .elem {
+                .btn {
+                    margin-top: 10px;
+                    background-color: $primarColor;
+                    border-color: $primarColor;
+                    &:hover {
+                        background-color: $secondaryColor;
+                        border-color: $secondaryColor;
+                    }
+                }
+            }
+        }
+        .project-list {
+            margin-top: 2em;
             display: grid;
             grid-template-columns: auto auto auto;
-            .block__elem {
+            justify-content: space-around;
+            .pl-elem {
+                position: relative;
                 margin: 10px;
-                background-color: red;
+                overflow: hidden;
+                max-width: 800px;
                 img {
                     width: 100%;
+                }
+                .detail {
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: -100%;
+                    left: 0;
+                    .detail-elem {
+                        color: white;
+                        width: inherit;
+                        height: inherit;
+                        background-color: rgba(0, 0, 0, 0.9);
+                        h1 {
+                            @include center();
+                            margin: 0;
+                        }
+                    }
+                }
+                // Make transition when hover on the project block
+                &:hover {
+                    .detail {
+                        display: inline;
+                        top: 0;
+                    }
                 }
             }
         }
     }
     // Contact
     .contact {
+        margin-top: 5em;
         h1 {
             text-align: center;
         }
         .block {
+            margin-top: 3em;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
