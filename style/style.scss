@@ -1,18 +1,5 @@
-// colors
-$primarColor:#406dc8;
-$secondaryColor:#56acbb;
-// Measurements
-$headingSize:52px;
-$headingSizeTab: 40px;
-$headingSizeMobile: 30px;
-// All center
-@mixin center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
+@import 'variables';
+@import 'functions';
 body {
     // Custom Scroll bar
     &::-webkit-scrollbar {
@@ -29,14 +16,13 @@ body {
     margin: 0;
     font-family: 'Tenali Ramakrishna',
     sans-serif;
-    background-color: rgba(0, 0, 0, 0.068);
     header {
         padding: 0;
         display: flex;
         justify-content: space-around;
         position: fixed;
         top: 0;
-        z-index: 1;
+        z-index: 2;
         width: 100%;
         background-image: linear-gradient(to right, $primarColor, $secondaryColor);
         h1 {
@@ -108,18 +94,17 @@ body {
     }
     // Projects
     .projects {
-        margin-top: 5em;
+        margin-top: $topMargin;
         h1 {
             text-align: center;
             font-size: $headingSize;
         }
         // btn-list
         .btn-list {
-            margin-top: 3em;
-            z-index: 2;
+            position: relative;
+            margin-top: $underTopMargin;
             .elem {
                 .btn {
-                    margin-top: 10px;
                     background-color: $primarColor;
                     border-color: $primarColor;
                     &:hover {
@@ -133,14 +118,20 @@ body {
             margin-top: 2em;
             display: grid;
             grid-template-columns: auto auto auto;
-            justify-content: space-around;
+            grid-gap: 25px;
+            padding: 20px;
+            overflow: hidden;
             .pl-elem {
                 position: relative;
-                margin: 10px;
-                overflow: hidden;
-                max-width: 800px;
+                max-width: 500px;
+                @include boxShadow(); //Box shadow
+                transition-duration: 600ms;
+                &:hover {
+                    @include increaseBoxShadow(); // Increase box shadow when hover
+                }
                 img {
                     width: 100%;
+                    height: 100%;
                 }
                 .detail {
                     display: none;
@@ -153,7 +144,7 @@ body {
                         color: white;
                         width: inherit;
                         height: inherit;
-                        background-color: rgba(0, 0, 0, 0.9);
+                        background-color: rgba(0, 0, 0, 0.7);
                         h1 {
                             @include center();
                             margin: 0;
@@ -172,12 +163,12 @@ body {
     }
     // Contact
     .contact {
-        margin-top: 5em;
+        margin-top: $topMargin;
         h1 {
             text-align: center;
         }
         .block {
-            margin-top: 3em;
+            margin-top: $underTopMargin;
             display: flex;
             flex-direction: row;
             justify-content: space-around;

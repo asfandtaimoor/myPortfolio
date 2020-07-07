@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: 'Tenali Ramakrishna', sans-serif;
-  background-color: rgba(0, 0, 0, 0.068);
 }
 
 body::-webkit-scrollbar {
@@ -28,7 +27,7 @@ body header {
       justify-content: space-around;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   background-image: -webkit-gradient(linear, left top, right top, from(#406dc8), to(#56acbb));
   background-image: linear-gradient(to right, #406dc8, #56acbb);
@@ -116,7 +115,7 @@ body .home .text h2 {
 }
 
 body .projects {
-  margin-top: 5em;
+  margin-top: 7em;
 }
 
 body .projects h1 {
@@ -125,12 +124,11 @@ body .projects h1 {
 }
 
 body .projects .btn-list {
-  margin-top: 3em;
-  z-index: 2;
+  position: relative;
+  margin-top: 4em;
 }
 
 body .projects .btn-list .elem .btn {
-  margin-top: 10px;
   background-color: #406dc8;
   border-color: #406dc8;
 }
@@ -146,19 +144,28 @@ body .projects .project-list {
   display: grid;
   -ms-grid-columns: auto auto auto;
       grid-template-columns: auto auto auto;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  grid-gap: 25px;
+  padding: 20px;
+  overflow: hidden;
 }
 
 body .projects .project-list .pl-elem {
   position: relative;
-  margin: 10px;
-  overflow: hidden;
-  max-width: 800px;
+  max-width: 500px;
+  -webkit-box-shadow: 0 0 10px 3px black;
+          box-shadow: 0 0 10px 3px black;
+  -webkit-transition-duration: 600ms;
+          transition-duration: 600ms;
+}
+
+body .projects .project-list .pl-elem:hover {
+  -webkit-box-shadow: 0 0 15px 5px black;
+          box-shadow: 0 0 15px 5px black;
 }
 
 body .projects .project-list .pl-elem img {
   width: 100%;
+  height: 100%;
 }
 
 body .projects .project-list .pl-elem .detail {
@@ -174,7 +181,7 @@ body .projects .project-list .pl-elem .detail .detail-elem {
   color: white;
   width: inherit;
   height: inherit;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 body .projects .project-list .pl-elem .detail .detail-elem h1 {
@@ -192,7 +199,7 @@ body .projects .project-list .pl-elem:hover .detail {
 }
 
 body .contact {
-  margin-top: 5em;
+  margin-top: 7em;
 }
 
 body .contact h1 {
@@ -200,7 +207,7 @@ body .contact h1 {
 }
 
 body .contact .block {
-  margin-top: 3em;
+  margin-top: 4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

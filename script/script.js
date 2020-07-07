@@ -2,23 +2,7 @@ let headNavigation = document.getElementById("headNavigation");
 let menu = document.getElementById("menu");
 let closeMenu = document.getElementById("close-menu");
 let menuPanel = document.getElementById("menu-panel");
-
-//  Change background of header  when user Scroll
-
-
-// Project list
-
-
-// window.onscroll = function() { myFunction() };
-
-// function myFunction() {
-//     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-//         headNavigation.style.backgroundColor = "black";
-//     } else {
-//         headNavigation.style.backgroundColor = "transparent";
-//     }
-// }
-
+let projects = document.getElementById('p-list');
 
 // Show the menu panel and close icon
 
@@ -66,4 +50,15 @@ function filter(activeClass) {
         currentBlock.style.display = "block";
     }
 
+}
+
+
+window.onscroll = function() { myFunction() };
+
+function myFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 100) {
+        console.log("working")
+    } else {
+        console.log("working Too")
+    }
 }
