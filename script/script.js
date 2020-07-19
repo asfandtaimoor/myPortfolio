@@ -4,6 +4,52 @@ let closeMenu = document.getElementById("close-menu");
 let menuPanel = document.getElementById("menu-panel");
 let projects = document.getElementById('p-list');
 
+
+
+
+
+// Header show on scroll up
+
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('headNavigation').outerHeight();
+
+$(window).scroll(function(event) {
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if (Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight) {
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if (st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+
+    lastScrollTop = st;
+}
+
+
 // Show the menu panel and close icon
 
 menu.addEventListener('click', () => {
@@ -50,15 +96,4 @@ function filter(activeClass) {
         currentBlock.style.display = "block";
     }
 
-}
-
-
-window.onscroll = function() { myFunction() };
-
-function myFunction() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 100) {
-        console.log("working")
-    } else {
-        console.log("working Too")
-    }
 }

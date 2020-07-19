@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="screen" href="particles/demo/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/projects.css">
 </head>
 
 <body>
@@ -48,102 +49,73 @@
         </div>
     </div>
 
-    <!-- Prjects -->
-    <div class="projects" id="project-section">
-        <h1>My work</h1>
 
-        <!-- Switch between different categories of Project -->
 
-        <div class="btn-list">
-            <div class="elem">
-                <button type="button" class="btn btn-primary btn-lg" onclick="filter('pl-elem')">All Projects</button>
-                <button type="button" class="btn btn-primary btn-lg" onclick="filter('one-page')">One Page</button>
-                <button type="button" class="btn btn-primary btn-lg" onclick="filter()">Multipage</button>
-                <button type="button" class="btn btn-primary btn-lg" onclick="filter('html-css')">Htm / Css / JS</button>
-                <button type="button" class="btn btn-primary btn-lg" onclick="filter('javascript')">JavaScript</button>
-            </div>
+
+
+
+    <div class="timeline-container" id="timeline-1">
+        <div class="timeline-header">
+            <h2 class="timeline-header__title">My Work</h2>
+            <h3 class="timeline-header__subtitle">Check out my Projects</h3>
         </div>
+        <div class="timeline">
+            <div class="timeline-item" data-text="HTml / JavaScript / Css /Angular">
+                <div class="timeline__content"><img class="timeline__img" src="./assets/img/company.png" />
+
+                    <a class="btn  timeline__content-title" href="../company/index.html"> Go To Project</a>
+                    <p class="timeline__content-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, incidunt! Distinctio eos, pariatur minima eaque inventore officiis nemo ipsum aliquam. Magni placeat unde aspernatur sunt magnam expedita accusantium in molestiae.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+                <div class="timeline__content"><img class="timeline__img" src="./assets/img/architecture.png" />
+                    <a class="btn  timeline__content-title" href="../architecture_01/index.html"> Go To Project</a>
+                    <p class="timeline__content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vitae voluptatum sunt dolorem consectetur recusandae laborum deserunt animi ullam eius, quis dolore iusto consequatur voluptatem debitis quos neque commodi quam.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+                <div class="timeline__content"><img class="timeline__img" src="./assets/img/onePage01.png" />
+                    <a class="btn  timeline__content-title" href="../onePage01/index.html"> Go To Project</a>
+                    <p class="timeline__content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est molestias sequi, veritatis, laboriosam placeat quaerat maiores praesentium reprehenderit dolore provident suscipit. Modi consectetur deleniti alias eveniet illo adipisci
+                        labore suscipit.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+                <div class="timeline__content"><img class="timeline__img" src="./assets/img/counter.png" />
+                    <a class="btn  timeline__content-title" href="../counter/index.html"> Go To Project</a>
+                    <p class="timeline__content-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat autem doloremque nulla reiciendis provident possimus impedit vel, voluptatum incidunt temporibus ducimus quidem modi laborum deserunt odio sequi expedita dolore doloribus.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+                <div class="timeline__content"><img class="timeline__img" src="./assets/img/tikTakToe.png" />
+                    <a class="btn  timeline__content-title" href="../Tik-Tak-Toe/index.html"> Go To Project</a>
+                    <p class="timeline__content-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum nesciunt, fugit dolor laudantium cumque esse, totam rerum ipsa at earum ea sapiente, molestias officiis temporibus adipisci cum facere vel nam?</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+                <div class="timeline__content"><img class="timeline__img" src="./assets/img/commingsoon.jpg" />
+                    <a class="btn  timeline__content-title" href="#"> Go To Project</a>
+                    <p class="timeline__content-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus optio totam incidunt odio quisquam explicabo? Reprehenderit deserunt eaque voluptatem repellat fugiat! Non minima consequatur pariatur eius cumque nostrum illum maxime!
+                    </p>
+                </div>
+            </div>
 
 
-
-        <!-- Project list block -->
-        <div class="project-list" id="p-list">
-
-            <a class="pl-elem elem-1 html-css one-page" href="../onePage01/index.html" target="_blank">
-                <img src="assets/img/onePage01.png" alt="project picture">
-                <div class="detail">
-                    <div class="detail-elem">
-                        <h1>Go to project</h1>
-                    </div>
-                </div>
-            </a>
-            <a class="pl-elem elem-2 one-page javascript" href="../Tik-Tak-Toe/index.html">
-                <img src="assets/img/tikTakToe.png" alt="project picture">
-                <div class="detail">
-                    <div class="detail-elem">
-                        <h1>Go to project</h1>
-                    </div>
-                </div>
-            </a>
-            <a class="pl-elem elem-3 one-page html-css" href="../architecture_01/index.html">
-                <img src="assets/img/architecture.png" alt="project picture">
-                <div class="detail">
-                    <div class="detail-elem">
-                        <h1>Go to project</h1>
-                    </div>
-                </div>
-            </a>
-            <a class="pl-elem elem-4">
-                <img src="assets/img/onePage01.png" alt="project picture">
-                <div class="detail">
-                    <div class="detail-elem">
-                        <h1>Go to project</h1>
-                    </div>
-                </div>
-            </a>
-            <a class="pl-elem elem-5 one-page javascript" href="../counter/index.html">
-                <img src="assets/img/counter.png" alt="project picture">
-                <div class="detail">
-                    <div class="detail-elem">
-                        <h1>Go to project</h1>
-                    </div>
-                </div>
-            </a>
-            <a class="pl-elem elem-6">
-                <img src="assets/img/onePage01.png" alt="project picture">
-                <div class="detail">
-                    <div class="detail-elem">
-                        <h1>Go to project</h1>
-                    </div>
-                </div>
-            </a>
         </div>
     </div>
 
 
 
-    <!-- Contact  -->
-
-    <div class="contact" id="contact-section">
-        <h1>Contact</h1>
-        <div class="block">
-            <div class="elem elem_1">
-                <a href="https://web.facebook.com/asfand.taimoor" target="_blank"><i class="fa fa-facebook"></i>asfand.taimoor</a> <br>
-                <a href="https://github.com/asfandtaimoor" target="_blank"><i class="fa fa-github"></i>asfand.taimoor</a><br>
-                <a href="mailto:asfandtaimoor786@gmail.com" target="_blank"><i class="fa fa-envelope"></i>asfandtaimoor786@gmail.com</a>
-            </div>
-            <div class="elem elem_2">
-                <form action="#">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email"><br>
-                    <input type="text" placeholder="Message">
-
-                </form>
-            </div>
-        </div>
-    </div>
 
 
+
+
+
+
+
+
+
+    <!-- Bootstrap -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -155,13 +127,19 @@
     <script src="particles/demo/js/app.js"></script>
 
 
-    <!-- Gsap -->
+    <!-- Gsap
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script> -->
+
+    <!-- jquery -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <!-- Customs -->
     <script src="script/script.js"></script>
-    <script src="./script/gsap.js"></script>
+    <!-- <script src="./script/gsap.js"></script> -->
+    <!-- Projects - Timeline -->
+    <script src="./script/timelineProjects.js"></script>
 </body>
 
 </html>
