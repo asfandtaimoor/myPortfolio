@@ -124,6 +124,70 @@ body .home .text h2 {
   text-align: right;
 }
 
+body footer {
+  margin-top: 5em;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(74%, #065186));
+  background-image: linear-gradient(0deg, #000000 0%, #065186 74%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  padding: 3em;
+  color: #dadada;
+}
+
+body footer .elem nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body footer .elem nav a {
+  color: #dadada;
+  text-decoration: none;
+  font-size: 18px;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+body footer .elem nav a span {
+  color: white;
+}
+
+body footer .elem nav a:hover {
+  color: white;
+  font-size: 22px;
+}
+
+body footer .elem__1 .text h1 span {
+  color: black;
+}
+
+body footer .elem__1 .icons a {
+  color: #b3b3b3;
+}
+
+body footer .elem__1 .icons a:hover {
+  color: white;
+}
+
+body footer .elem__1 .icons a:hover i {
+  font-size: 60px;
+}
+
+body footer .elem__1 .icons a i {
+  font-size: 40px;
+  margin-left: 20px;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
 @media screen and (max-width: 768px) {
   body header ul {
     display: none;
@@ -170,6 +234,10 @@ body .home .text h2 {
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
   }
+  body footer {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -185,6 +253,10 @@ body .home .text h2 {
     font-size: 40px;
   }
   body .projects .project-list {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  body footer {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }

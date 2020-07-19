@@ -74,7 +74,7 @@ body {
     .nav-down {
         top: 0; // same as header height. use variables in LESS/SASS
         background-color: #000000;
-        background-image: linear-gradient(147deg, #000000 0%, #065186 74%);
+        background-image: linear-gradient(147deg, #000000 0%, $primaryColor 74%);
     }
     // Home
     .home {
@@ -98,6 +98,61 @@ body {
                 font-size: 30px;
                 margin: 10px;
                 text-align: right;
+            }
+        }
+    }
+    // Footer 
+    footer {
+        margin-top: $marginTop;
+        background-image: linear-gradient(0deg, #000000 0%, $primaryColor 74%);
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-gap: 30px;
+        padding: 3em;
+        color: $footerTextColor;
+        .elem {
+            nav {
+                display: flex;
+                flex-direction: column;
+                a {
+                    color: $footerTextColor;
+                    text-decoration: none;
+                    font-size: 18px;
+                    transition-duration: .5s;
+                    span {
+                        color: white;
+                    }
+                    &:hover {
+                        color: white;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        .elem__1 {
+            .text {
+                h1 {
+                    span {
+                        color: black;
+                    }
+                }
+            }
+            .icons {
+                a {
+                    color: rgb(179, 179, 179);
+                    &:hover {
+                        color: white;
+                        i {
+                            font-size: 60px;
+                        }
+                    }
+                    i {
+                        font-size: 40px;
+                        margin-left: 20px;
+                        cursor: pointer;
+                        transition-duration: .5s;
+                    }
+                }
             }
         }
     }
@@ -157,6 +212,10 @@ body {
                 grid-template-columns: auto auto;
             }
         }
+        // Footer
+        footer {
+            grid-template-columns: auto auto;
+        }
     }
 }
 
@@ -183,6 +242,10 @@ body {
             .project-list {
                 grid-template-columns: auto;
             }
+        }
+        // Footer
+        footer {
+            grid-template-columns: auto;
         }
     }
 }

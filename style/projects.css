@@ -47,6 +47,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .timeline__content-title {
+        font-size: 24px;
+        /* go to project button size of smaller screen  */
+    }
     .timeline:before {
         left: 40px;
     }
