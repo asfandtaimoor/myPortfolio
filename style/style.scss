@@ -1,251 +1,73 @@
-@import 'variables';
-@import 'functions';
+// Scroll Bar
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #040c14; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(51, 51, 51); /* color of the scroll thumb */
+}
+
 body {
-    // Custom Scroll bar
-    &::-webkit-scrollbar {
-        width: 10px;
-        background-color: rgb(42, 42, 42);
-    }
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: rgb(128, 127, 127);
-        outline: 1px solid rgb(128, 127, 127);
-    }
-    margin: 0;
-    font-family: 'Tenali Ramakrishna',
-    sans-serif;
-    header {
-        padding: 0;
-        display: flex;
-        justify-content: space-around;
-        position: fixed;
-        top: 0;
-        z-index: 2;
-        width: 100%;
-        transition: top 0.3s ease-in-out;
-        h1 {
-            margin: 0;
-            padding: 10px;
-            font-size: 32px;
-            color: white;
-        }
-        ul {
-            list-style-type: none;
-            display: flex;
-            margin: 0;
-            li {
-                padding: 10px 20px;
-                font-size: 32px;
-                cursor: pointer;
-                &:hover {
-                    background-color: rgba(255, 255, 255, 0.514);
-                    a {
-                        color: $secondaryColor;
-                        text-decoration: none;
-                    }
-                }
-                a {
-                    color: white;
-                }
-            }
-            // Closing icon for Tabs and mobile
-            .fa-times {
-                color: white;
-                right: 3%;
-                position: absolute;
-                font-size: 50px;
-                display: none;
-                top: 0;
-            }
-        }
-        .hamburger {
-            display: none;
-            .fa-bars {
-                color: white;
-            }
-        }
-    }
-    // we'll add this class using javascript
-    .nav-up {
-        top: -60px; // same as header height. use variables in LESS/SASS
-    }
-    .nav-down {
-        top: 0; // same as header height. use variables in LESS/SASS
-        background-color: #000000;
-        background-image: linear-gradient(147deg, #000000 0%, $primaryColor 74%);
-    }
-    // Home
-    .home {
-        max-height: 200vh;
-        overflow: hidden;
-        position: relative;
-        #particles-js {
-            height: 100vh;
-        }
-        .text {
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 60px;
-            h1 {
-                margin: 20px;
-            }
-            h2 {
-                font-size: 30px;
-                margin: 10px;
-                text-align: right;
-            }
-        }
-    }
-    // Footer 
-    footer {
-        margin-top: $marginTop;
-        background-image: linear-gradient(0deg, #000000 0%, $primaryColor 74%);
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-        grid-gap: 30px;
-        padding: 3em;
-        color: $footerTextColor;
-        .elem {
-            nav {
-                display: flex;
-                flex-direction: column;
-                a {
-                    color: $footerTextColor;
-                    text-decoration: none;
-                    font-size: 18px;
-                    transition-duration: .5s;
-                    span {
-                        color: white;
-                    }
-                    &:hover {
-                        color: white;
-                        font-size: 22px;
-                    }
-                }
-            }
-        }
-        .elem__1 {
-            .text {
-                h1 {
-                    span {
-                        color: black;
-                    }
-                }
-            }
-            .icons {
-                a {
-                    color: rgb(179, 179, 179);
-                    &:hover {
-                        color: white;
-                        i {
-                            font-size: 60px;
-                        }
-                    }
-                    i {
-                        font-size: 40px;
-                        margin-left: 20px;
-                        cursor: pointer;
-                        transition-duration: .5s;
-                    }
-                }
-            }
-        }
-    }
-}
+  // Home text
+  .home__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 
-@media screen and (max-width:768px) {
-    body {
-        // Header
-        header {
-            ul {
-                display: none;
-                position: fixed;
-                background-color: rgba(0, 0, 0, 0.9);
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100vh;
-                flex-direction: column;
-                z-index: 1;
-                padding-left: 0;
-                li {
-                    cursor: pointer;
-                    text-align: center;
-                    &:nth-child(1) {
-                        margin-top: 60px;
-                    }
-                }
-            }
-            .hamburger {
-                display: block;
-                position: absolute;
-                right: 3%;
-                .fa-bars {
-                    font-size: 47px;
-                }
-            }
-        }
-        // Home
-        .home {
-            .text {
-                h1 {
-                    font-size: 60px;
-                    margin: 10px;
-                }
-                h2 {
-                    font-size: 20px;
-                    margin: 5px;
-                }
-            }
-        }
-        // Projects
-        .projects {
-            h1 {
-                font-size: $headingSizeTab;
-            }
-            .project-list {
-                grid-template-columns: auto auto;
-            }
-        }
-        // Footer
-        footer {
-            grid-template-columns: auto auto;
-        }
-    }
-}
+    font-family: Domine, sans-serif;
 
-@media screen and (max-width:425px) {
-    body {
-        // Home
-        .home {
-            .text {
-                h1 {
-                    font-size: 40px;
-                    margin: 10px;
-                }
-                h2 {
-                    font-size: 20px;
-                    margin: 5px;
-                }
-            }
-        }
-        // Projects
-        .projects {
-            h1 {
-                font-size: $headingSizeTab;
-            }
-            .project-list {
-                grid-template-columns: auto;
-            }
-        }
-        // Footer
-        footer {
-            grid-template-columns: auto;
-        }
+    p {
+      font-weight: normal;
+      font-size: 3rem;
     }
+  }
+
+  // Home Animation
+
+  .mouse {
+    position: absolute;
+    width: 35px;
+    height: 60px;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -12px;
+    border-radius: 15px;
+    border: 2px solid #888;
+    animation: intro 2s;
+    cursor: pointer;
+  }
+  .scroll {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 6px auto;
+    border-radius: 4px;
+    background: #888;
+    animation: finger 1s infinite;
+  }
+  @keyframes intro {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes finger {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
 }

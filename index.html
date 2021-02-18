@@ -1,200 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Taimoor Salyhal" content="My Portfolio" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" media="screen" href="particles/demo/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/projects.css">
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" media="screen" href="particles/demo/css/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- heading -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Body -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <!-- font Awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-</head>
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./style/projects.css" />
+    <!-- Footer -->
+    <link rel="stylesheet" href="./components/footer/footer.style.css" />
+    <script>
+      $(function () {
+        $('#navbar').load('./components/navbar/navbar.html');
+        $('#footer').load('./components/footer/footer.html');
+      });
+    </script>
+  </head>
 
-<body>
-
-    <header id="headNavigation">
-        <h1>A_Taimoor</h1>
-
-        <ul id="menu-panel">
-            <li onclick="jumpBlock()"><a href="#home-section">Home</a></li>
-            <li onclick="jumpBlock()"><a href="#project-section">Projects</a></li>
-            <li onclick="jumpBlock()"><a href="#contact-section">Contact</a></li>
-            <li onclick="jumpBlock()"><a href="#">About</a></li>
-            <i class="fa fa-times" id="close-menu"></i>
-        </ul>
-        <div class="hamburger" id="menu">
-            <i class="fa fa-bars"></i>
-        </div>
-    </header>
-
-
-
-
-
-
+  <body>
     <!-- Home -->
-    <div class="home" id="home-section">
 
-        <!-- particles.js container -->
-        <div id="particles-js"></div>
+    <!-- particles.js container -->
 
+    <div class="home">
+      <div id="particles-js"></div>
+      <div class="home__text">
+        <h3>I'm Taimoor</h3>
+        <p>
+          I'm
+          <span
+            class="txt-rotate font-weight-bold"
+            data-period="2000"
+            data-rotate='[ "front-end Developer.", "Creative."]'
+          ></span>
+        </p>
+      </div>
 
-        <div class="text">
-            <h1 class="myName">A_Taimoor</h1>
-            <h2> I am front-end developer</h2>
-        </div>
+      <div class="mouse">
+        <div class="scroll"></div>
+      </div>
     </div>
-
-
-
-
-
-
-    <div class="timeline-container" id="timeline-1">
-        <div class="timeline-header">
-            <h2 class="timeline-header__title">My Work</h2>
-            <h3 class="timeline-header__subtitle">Check out my Projects</h3>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item" data-text="HTml / JavaScript / Css /Angular">
-                <div class="timeline__content"><img class="timeline__img" src="./assets/img/company.png" />
-
-                    <a class="btn  timeline__content-title" href="../company/index.html"> Go To Project</a>
-                    <p class="timeline__content-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, incidunt! Distinctio eos, pariatur minima eaque inventore officiis nemo ipsum aliquam. Magni placeat unde aspernatur sunt magnam expedita accusantium in molestiae.</p>
-                </div>
-            </div>
-            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
-                <div class="timeline__content"><img class="timeline__img" src="./assets/img/architecture.png" />
-                    <a class="btn  timeline__content-title" href="../architecture_01/index.html"> Go To Project</a>
-                    <p class="timeline__content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vitae voluptatum sunt dolorem consectetur recusandae laborum deserunt animi ullam eius, quis dolore iusto consequatur voluptatem debitis quos neque commodi quam.</p>
-                </div>
-            </div>
-            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
-                <div class="timeline__content"><img class="timeline__img" src="./assets/img/onePage01.png" />
-                    <a class="btn  timeline__content-title" href="../onePage01/index.html"> Go To Project</a>
-                    <p class="timeline__content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est molestias sequi, veritatis, laboriosam placeat quaerat maiores praesentium reprehenderit dolore provident suscipit. Modi consectetur deleniti alias eveniet illo adipisci
-                        labore suscipit.</p>
-                </div>
-            </div>
-            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
-                <div class="timeline__content"><img class="timeline__img" src="./assets/img/counter.png" />
-                    <a class="btn  timeline__content-title" href="../counter/index.html"> Go To Project</a>
-                    <p class="timeline__content-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat autem doloremque nulla reiciendis provident possimus impedit vel, voluptatum incidunt temporibus ducimus quidem modi laborum deserunt odio sequi expedita dolore doloribus.</p>
-                </div>
-            </div>
-            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
-                <div class="timeline__content"><img class="timeline__img" src="./assets/img/tikTakToe.png" />
-                    <a class="btn  timeline__content-title" href="../Tik-Tak-Toe/index.html"> Go To Project</a>
-                    <p class="timeline__content-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum nesciunt, fugit dolor laudantium cumque esse, totam rerum ipsa at earum ea sapiente, molestias officiis temporibus adipisci cum facere vel nam?</p>
-                </div>
-            </div>
-            <div class="timeline-item" data-text="NEW TIMELINE DESIGN">
-                <div class="timeline__content"><img class="timeline__img" src="./assets/img/commingsoon.jpg" />
-                    <a class="btn  timeline__content-title" href="#"> Go To Project</a>
-                    <p class="timeline__content-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus optio totam incidunt odio quisquam explicabo? Reprehenderit deserunt eaque voluptatem repellat fugiat! Non minima consequatur pariatur eius cumque nostrum illum maxime!
-                    </p>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-
-
-
-
 
     <!-- Footer -->
-
-
-    <footer>
-        <div class="elem elem__1">
-            <div class="text">
-                <h1><span>A_</span>Taimoor<span>.</span></h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore qui eaque nemo impedit deleniti rerum ipsa quasi facilis officia libero reprehenderit blanditiis provident ad molestias fugiat fugit, vitae nulla veritatis!</p>
-
-
-            </div>
-            <div class="icons">
-                <a href="https://web.facebook.com/asfand.taimoor/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                <a href="https://twitter.com/salyhal" target="_blank"> <i class="fab fa-twitter-square"></i></a>
-                <a href="https://github.com/asfandtaimoor" target="_blank"><i class="fab fa-github-square"></i></a>
-                <a href="https://www.instagram.com/taimoorsalyhal/" target="_blank"><i class="fab fa-instagram"></i></a>
-
-            </div>
-        </div>
-        <div class="elem ">
-            <h3>Quick Links</h3>
-            <nav>
-                <a href="#home-section"><span>></span>Home</a>
-                <a href="#project-section"><span>></span>About Us</a>
-                <a href="#"><span>></span>Comming Soon</a>
-                <a href="#"><span>></span>Comming Soon</a>
-                <a href="#"><span>></span>Comming Soon</a>
-                <a href="#"><span>></span>Comming Soon</a>
-            </nav>
-        </div>
-        <div class="elem ">
-            <h3>Categories</h3>
-            <nav>
-                <a href="#"><span>></span>Web Design</a>
-                <a href="#"><span>></span> Web Development</a>
-                <a href="#"><span>></span>Online Marketing</a>
-                <a href="#"><span>></span>Portfolio</a>
-                <a href="#"><span>></span>App Design</a>
-                <a href="#"><span>></span>App Development</a>
-                <a href="#"><span>></span>Online Training</a>
-            </nav>
-        </div>
-        <div class="elem">
-            <h3>Recent Posts</h3>
-            <nav>
-                <a href="#"><span>></span>What is Lorem?</a>
-                <a href="#"><span>></span>Why do we use it?</a>
-                <a href="#"><span>></span>There are many variations</a>
-                <a href="#"><span>></span>Passages of lorem </a>
-                <a href="#"><span>></span>Contrary to popular</a>
-                <a href="#"><span>></span>Lorem ispum is not simply</a>
-            </nav>
-        </div>
-    </footer>
-
-
-
-
+    <div id="footer"></div>
 
     <!-- Bootstrap -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
 
-
+    <!-- Typewriter text js files -->
+    <script src="./script/typriter-text.js"></script>
     <!-- Particles -scripts -->
     <script src="particles/particles.js"></script>
     <script src="particles/demo/js/app.js"></script>
 
-
-    <!-- Gsap
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script> -->
-
-    <!-- jquery -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
     <!-- Customs -->
     <script src="script/script.js"></script>
-    <!-- <script src="./script/gsap.js"></script> -->
-    <!-- Projects - Timeline -->
-    <script src="./script/timelineProjects.js"></script>
-</body>
 
+    <script src="./script/timelineProjects.js"></script>
+  </body>
 </html>

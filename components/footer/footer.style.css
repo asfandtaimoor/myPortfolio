@@ -1,0 +1,8 @@
+footer {
+  width: 100%;
+  padding: 0 2em;
+}
+.list > nav {
+  display: flex;
+  flex-direction: column;
+}
