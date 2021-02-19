@@ -13,6 +13,10 @@ body::-webkit-scrollbar-thumb {
   /* color of the scroll thumb */
 }
 
+body {
+  background-color: #f7f7f7;
+}
+
 body .home__text {
   position: absolute;
   top: 50%;

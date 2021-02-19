@@ -48,10 +48,14 @@
     <link rel="stylesheet" href="./style/projects.css" />
     <!-- Footer -->
     <link rel="stylesheet" href="./components/footer/footer.style.css" />
+    <!-- Skills Style -->
+    <link rel="stylesheet" href="./components/skills/skill.style.css" />
+
     <script>
       $(function () {
         $('#navbar').load('./components/navbar/navbar.html');
         $('#footer').load('./components/footer/footer.html');
+        $('#skills').load('./components/skills/skills.html');
       });
     </script>
   </head>
@@ -61,7 +65,7 @@
 
     <!-- particles.js container -->
 
-    <div class="home">
+    <div class="home position-relative">
       <div id="particles-js"></div>
       <div class="home__text">
         <h3>I'm Taimoor</h3>
@@ -80,6 +84,10 @@
       </div>
     </div>
 
+    <!-- Skills -->
+    <div id="skills" class="mt-5"></div>
+
+    <h1>Working</h1>
     <!-- Footer -->
     <div id="footer"></div>
 
@@ -104,7 +112,5 @@
 
     <!-- Customs -->
     <script src="script/script.js"></script>
-
-    <script src="./script/timelineProjects.js"></script>
   </body>
 </html>

@@ -1,8 +1,8 @@
 footer {
-  width: 100%;
-  padding: 0 2em;
-}
-.list > nav {
+  background-color: #111111;
+  color: white;
+
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

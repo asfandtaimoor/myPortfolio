@@ -1,0 +1,11 @@
+/* Heading Font family */
+.skills__block > h3,
+h2,
+h1 {
+  font-family: Domine, sans-serif;
+}
+
+/* Paragraph font family */
+.skills__block > p {
+  font-family: Roboto, sans-serif;
+}
