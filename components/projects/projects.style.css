@@ -1,0 +1,123 @@
+button {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+html {
+  height: 100%;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: none;
+}
+
+.filter-control {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.filter-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.filter-btn {
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(67, 110, 141, 0.37);
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #3da9fc;
+  padding: 15px 26px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 0 8px;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.filter-btn:hover {
+  box-shadow: none;
+}
+.filter-btn.active {
+  background: #3da9fc;
+  box-shadow: none;
+  color: #ffffff;
+}
+.filter-content {
+  background: #ffffff;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 30px 20px;
+}
+.grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+.grid-item {
+  /* width: 300px;
+  height: 300px; */
+  margin: 8px;
+  border-radius: 6px;
+}
+.filter1 {
+  background: #ef4565;
+}
+.filter2 {
+  background: #90b4ce;
+}
+.filter3 {
+  background: #87d7a7;
+}
+.filter4 {
+  background: #ffe299;
+}
+.clear-all {
+  font-size: 20px;
+  line-height: 24px;
+  color: #3da9fc;
+  background: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.clear-all:hover {
+  color: #094067;
+}

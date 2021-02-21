@@ -6,11 +6,6 @@
     <meta name="Taimoor Salyhal" content="My Portfolio" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style/style.css" />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap"
-      rel="stylesheet"
-    /> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <link rel="stylesheet" media="screen" href="particles/demo/css/style.css" />
 
@@ -50,12 +45,17 @@
     <link rel="stylesheet" href="./components/footer/footer.style.css" />
     <!-- Skills Style -->
     <link rel="stylesheet" href="./components/skills/skill.style.css" />
-
+    <!-- form Style -->
+    <link rel="stylesheet" href="./components/form/form.style.css" />
+    <!-- form Style -->
+    <link rel="stylesheet" href="./components/projects/projects.style.css" />
     <script>
       $(function () {
         $('#navbar').load('./components/navbar/navbar.html');
         $('#footer').load('./components/footer/footer.html');
         $('#skills').load('./components/skills/skills.html');
+        $('#form').load('./components/form/form.html');
+        $('#reviews').load('./components/reviews/reviews.html');
       });
     </script>
   </head>
@@ -85,11 +85,50 @@
     </div>
 
     <!-- Skills -->
-    <div id="skills" class="mt-5"></div>
+    <div id="skills" class="margin__top"></div>
 
-    <h1>Working</h1>
+    <!-- reviews -->
+    <!-- <div id="reviews" class="mt-5"></div> -->
+
+    <!-- form -->
+    <div class="projects margin__top container">
+      <h1 class="text-center mb-5">Projects</h1>
+      <div class="filter-control">
+        <div class="filter-list">
+          <button class="filter-btn" data-filter="filter1">HTML-CSS</button>
+          <button class="filter-btn" data-filter="filter2">BOOTSTRAP</button>
+          <button class="filter-btn" data-filter="filter3">REACT</button>
+          <button class="filter-btn" data-filter="filter4">GSAP</button>
+        </div>
+        <button class="filter-btn clear-all">Clear all</button>
+      </div>
+      <div class="filter-content">
+        <div class="grid">
+          <div class="grid-item filter3">
+            <a href="https://silly-golick-83caf8.netlify.app/">
+              <img
+                src="./assets/img/color-picker-react-app.png"
+                alt="color-picker-react-app"
+              />
+            </a>
+          </div>
+          <div class="grid-item filter2"></div>
+          <div class="grid-item filter1 filter2"></div>
+          <div class="grid-item filter3 filter1"></div>
+          <div class="grid-item filter3"></div>
+          <div class="grid-item filter3"></div>
+          <div class="grid-item filter4"></div>
+          <div class="grid-item filter4"></div>
+          <div class="grid-item filter1"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- form -->
+    <div id="form" class="mt-5 container"></div>
+
     <!-- Footer -->
-    <div id="footer"></div>
+    <div id="footer" class="mt-5"></div>
 
     <!-- Bootstrap -->
 
@@ -112,5 +151,7 @@
 
     <!-- Customs -->
     <script src="script/script.js"></script>
+    <!-- Projects list -->
+    <script src="./components/projects/projects.script.js"></script>
   </body>
 </html>

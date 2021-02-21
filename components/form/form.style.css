@@ -1,0 +1,19 @@
+.contact__item {
+  margin-top: 20px;
+}
+.contact__icon {
+  position: relative;
+  border-radius: 4px;
+}
+.contact__icon > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.contact__text > p {
+  padding: 0;
+  margin: 0;
+}

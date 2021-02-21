@@ -1,3 +1,7 @@
+.bg--dark {
+  background-color: #111111;
+}
+
 // Scroll Bar
 body::-webkit-scrollbar {
   width: 12px; /* width of the entire scrollbar */
@@ -7,6 +11,11 @@ body::-webkit-scrollbar-track {
 }
 body::-webkit-scrollbar-thumb {
   background-color: rgb(51, 51, 51); /* color of the scroll thumb */
+}
+
+// Custom Classes
+.margin__top {
+  margin-top: 6rem;
 }
 
 body {
